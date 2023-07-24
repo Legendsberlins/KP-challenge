@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@300;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Oswald', sans-serif;
+}
+img{
+    max-width: 100%;
+}
+.header{
+    background-color: #2E323F;
+    padding: 0.5rem 0rem;
+    text-align: center;
+    
+}
+h1,h2,h3{
+    font-family: 'Oswald', sans-serif;
+}
+p{
+    font-family:'Montserrat', sans-serif;
+}
+.container{
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+.nav-toggle {
+    cursor: pointer;
+    border: none;
+    width: 3em;
+    height: 2.5em;
+    padding: 0em;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    transition: opacity 250ms ease;
+    background-color:#2E323F;
+    
+}
+.nav-toggle:focus,
+.nav-toggle:hover {
+    opacity: .75;
+}
+
+.hamburger {
+    width: 50%;
+    position: relative;
+}
+.hamburger,.hamburger::before,.hamburger::after{
+    display: block;
+    background-color: #A59678;
+    margin: 0 auto;
+    height: 4px;
+    border-radius: 3px;
+}
+.hamburger::before,.hamburger::after{
+    content: '';
+    width: 100%;
+}
+.hamburger::before{
+    transform: translateY(-6px);
+}
+.hamburger::after{
+    transform: translateY(2px);
+}
+.nav{
+    position: absolute;
+    height: 0;
+    width: 100%;
+    visibility: hidden;
+}
+.nav--visible {
+    visibility: visible;
+    height: auto;
+    position: relative;
+} 
+.nav__list{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+.nav__item{
+    margin-top: 1rem;
+}
+.nav__link{
+    text-decoration: none;
+    font-weight: bold;
+    color:#A59678;
+}
+.nav__link:hover, .nav__link:focus{
+    color:#a5967888;
+}
+.nav__button{
+    background-color: #A59678;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 3rem;
+}
+.nav__button:hover, nav__button:focus{
+    color: white;
+    background-color: #a5967893;
+}
+.nav__list--secondary{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.logo{
+    height: 30px;
+}
+.hero{
+    background:#3B4050;
+    max-height: 80vh;
+    padding: 3rem 0;
+    color:white;
+}
+.hero__h{
+    font-size: 3rem;
+}
+.hero__h span{
+    color: #A59678;
+}
+
+.hero__button{
+    background-color: #A59678;
+    padding: 1rem;
+    border-radius: 3rem;
+    border: none;
+    margin-top: 1rem;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+.hero__button:hover,.hero__button:focus{
+    background-color:#a5967893;
+}
+.cards{
+    background: #6F737F;
+    padding: 2.5rem 0rem;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+.card{
+    margin-bottom: 1rem;
+}
+.card__h{
+    color:#A59678;
+    margin-bottom: 0.8rem;
+    font-family: 'Oswald', sans-serif;
+}
+.details{
+    padding: 1.5rem 0;
+}
+.details__h{
+    color:#A59678;
+}
+.details__main--box{
+    background-color: #3B4050;
+    padding: 1.5rem;
+    color: white;
+    margin-top: 1rem;
+    text-align: center;
+    min-height: 200px;
+}
+
+.footer{
+    background: #3B4050;
+    color: white;
+    padding: 1rem 0rem;
+}
+.footer__title{
+    color: white;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 24px;
+}
+.footer__h{
+    margin-bottom: 1rem;
+    color:#A59678;
+}
+.footer__row{
+    display: flex;
+    justify-content:space-between;
+    gap: 2rem;
+    width: 100%;
+}
+
+.footer__list{
+    list-style-type: none;
+}
+.footer__item{
+    margin-bottom: 0.5rem;
+}
+
+@media (min-width: 700px){
+    .nav-toggle {
+        display: none;
+    }
+    .nav {
+        visibility: visible;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: auto;
+        position: relative;
+    }
+    .logo{
+        position: absolute;
+        left: 0;
+    }
+    
+    .nav__list{
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+    }
+    .nav__list--primary{
+        margin: 0 auto;
+    }
+    .nav__item{
+        margin: 0 0 0 1.5rem;
+    }
+    
+    
+    .hero__row{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+    
+    .row{
+        display: flex;
+        margin-top: 0.5rem;
+    } 
+    .card + .card{
+        margin-left: 2rem;
+    }
+    
+    .footer__details{
+        display: flex;
+        gap: 2rem;
+    }
+    
+}
+@media (min-width: 1000px){
+    .aside{
+        display: flex;
+        justify-content: space-between;
+        gap: 4rem;
+    }
+}
+
